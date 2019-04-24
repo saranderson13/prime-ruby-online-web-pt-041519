@@ -7,9 +7,7 @@ def prime?(num)
     true
   else
     check = (2..(num - 1))
-    check.to_a.each do |divide_by|
-      return false if num % divide_by == 0
-    end
+    check.to_a.each { |divide_by| return false if num % divide_by == 0 }
     true
   end
 end
